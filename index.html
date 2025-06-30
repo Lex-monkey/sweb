@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lex的神奇服务器 - Minecraft服务器</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Lex的神奇服务器</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">首页</a>
+                <a href="#features" class="nav-link">特色</a>
+                <a href="#community" class="nav-link">社区</a>
+                <a href="#join" class="nav-link">加入我们</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主页部分 -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-blocks">
+                <div class="block block1">🟫</div>
+                <div class="block block2">🟩</div>
+                <div class="block block3">🟦</div>
+                <div class="block block4">🟨</div>
+                <div class="block block5">🟪</div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">欢迎来到神奇世界</h1>
+            <p class="hero-subtitle">体验最棒的Minecraft多人游戏</p>
+            <div class="server-info">
+                <div class="server-ip">
+                    <span>服务器IP:</span>
+                    <code id="server-ip">mc.none.ink</code>
+                    <button class="copy-btn" onclick="copyIP()">📋 复制</button>
+                </div>
+            </div>
+            <button class="cta-button" onclick="scrollToSection('join')">
+                <span>立即加入</span>
+                <div class="button-effect"></div>
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- 特色功能部分 -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">服务器特色</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏰</div>
+                    <h3>创意建造</h3>
+                    <p>无限的创造可能，与朋友一起建造梦想中的世界</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎉</div>
+                    <h3>定期活动</h3>
+                    <p>丰富的服务器活动，获得独特奖励</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>安全保障</h3>
+                    <p>24/7监控，确保公平游戏环境</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社区部分 -->
+    <section id="community" class="community">
+        <div class="container">
+            <h2 class="section-title">活跃社区</h2>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="4">0</div>
+                    <div class="stat-label">在线玩家</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="4">0</div>
+                    <div class="stat-label">注册用户</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="12">0</div>
+                    <div class="stat-label">活跃时长(小时)</div>
+                </div>
+            </div>
+            
+            <div class="community-features">
+                <div class="community-card">
+                    <h3>💬 QQ社区</h3>
+                    <p>加入我们的QQ服务器，与其他玩家实时交流</p>
+                    <button class="discord-btn">加入QQ群组</button>
+                </div>
+                <div class="community-card">
+                    <h3>📸 玩家作品</h3>
+                    <p>分享你的建筑杰作，获得社区认可</p>
+                    <button class="gallery-btn">查看作品</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 加入我们部分 -->
+    <section id="join" class="join-section">
+        <div class="container">
+            <h2 class="section-title">开始你的冒险</h2>
+            <div class="join-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>下载游戏</h3>
+                    <p>确保你有Minecraft Java 1.21.1版</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>复制IP</h3>
+                    <p>复制服务器IP地址</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>开始游戏</h3>
+                    <p>在多人游戏中添加服务器</p>
+                </div>
+            </div>
+            
+            <div class="final-cta">
+    <h3>准备好了吗？</h3>
+    
+    <!-- 登录方式说明 -->
+    <div class="login-info">
+        <h4>如何登录我们的服务器？</h4>
+        <div class="login-methods">
+            <div class="login-method">
+                <div class="method-icon">✅</div>
+                <div class="method-content">
+                    <h5>正版登录</h5>
+                    <p>使用你的正版Minecraft账户直接登录</p>
+                </div>
+            </div>
+            <div class="login-method">
+                <div class="method-icon">🎨</div>
+                <div class="method-content">
+                    <h5>LittleSkin登录</h5>
+                    <p>使用LittleSkin皮肤站账户登录</p>
+                    <a href="https://littleskin.cn/" target="_blank" class="littleskin-link">
+                        点这里到达LittleSkin皮肤站！
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="server-ip-final">
+        <span>服务器IP: </span>
+        <code>mc.none.ink</code>
+        <button class="copy-btn" onclick="copyIP()">复制IP</button>
+    </div>
+</div>
+
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lex的神奇服务器</h3>
+                    <p>打造最棒的Minecraft多人体验</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <a href="#home">首页</a>
+                    <a href="#features">特色</a>
+                    <a href="#community">社区</a>
+                </div>
+                
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lex的神奇服务器. 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js\script.js"></script>
+</body>
+</html>
