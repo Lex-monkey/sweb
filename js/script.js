@@ -178,33 +178,33 @@ document.addEventListener('DOMContentLoaded', function() {
     // 鼠标粒子效果
     function createParticleEffect() {
         document.addEventListener('mousemove', function(e) {
-            // 限制粒子生成频率
-            if (Math.random() > 0.1) return;
+            // 调整粒子生成频率（降低阈值增加生成量）
+            if (Math.random() > 0.3) return;
             
             const particle = document.createElement('div');
             particle.className = 'mouse-particle';
             
             particle.style.cssText = `
                 position: fixed;
-                width: 4px;
-                height: 4px;
-                background: radial-gradient(circle, #3498db, transparent);
+                width: 6px;
+                height: 6px;
+                background: radial-gradient(circle, #e74c3c, #f1c40f);
                 border-radius: 50%;
                 pointer-events: none;
                 z-index: 9999;
                 left: ${e.clientX}px;
                 top: ${e.clientY}px;
-                animation: particleFade 1s ease-out forwards;
+                animation: particleFade 1.5s ease-out forwards;
             `;
             
             document.body.appendChild(particle);
             
-            // 1秒后移除粒子
+            // 1.5秒后移除粒子
             setTimeout(() => {
                 if (document.body.contains(particle)) {
                     document.body.removeChild(particle);
                 }
-            }, 1000);
+            }, 1500);
         });
     }
 
@@ -445,4 +445,3 @@ window.addEventListener('load', function() {
     const loadTime = perfData.loadEventEnd - perfData.navigationStart;
     console.log(`📊 页面加载时间: ${loadTime}ms`);
 });
-
